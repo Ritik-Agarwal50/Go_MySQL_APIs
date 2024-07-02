@@ -20,3 +20,4 @@ func init() {
 	db = config.GetDB()
 	db.AutoMigrate(&Book{})
 }
+
