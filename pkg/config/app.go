@@ -11,7 +11,7 @@ var (
 )
 
 func Connect() {
-	d, err := gorm.Open("mysql", "ritik:root/simplerest?charset=utf8&parseTime=True&loc=Local")
+	d, err := gorm.Open("mysql", "ritik:root@tcp(localhost:3306)/Go?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		fmt.Println("database not found: ",err)
 	}
