@@ -2,7 +2,8 @@ package config
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/jinzhu/gorm/dialects/mysql"
+	"fmt"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 var (
@@ -12,7 +13,7 @@ var (
 func Connect() {
 	d, err := gorm.Open("mysql", "ritik:root/simplerest?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
-		panic(err)
+		fmt.Println("database not found: ",err)
 	}
 	db = d
 }

@@ -12,7 +12,7 @@ type Book struct {
 	gorm.Model
 	Name string `gorn:""json:"name"`
 	Author string `json:"author"`
-	Publlication string `json:"publication"`
+	Publication string `json:"publication"`
 }
 
 func init() {
